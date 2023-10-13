@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.7.0/nouislider.min.js"></script>
+
+
+    <title>Центр здоровой стопы</title>
+</head>
+<body class="franchise__body">
+    
+    <header class="header header-primary" id="header"> 
+        <div class="header__desktop-wrapper header-inner">
+            <div class="container header__container">
+                <div class="row header__row">
+                    <div class="col-md-3 header__menu">
+                        <div class="hamburger-menu">
+                            <div class="burger-menu">
+                                <span class="bar"></span>
+                                <span class="bar"></span>
+                                <span class="bar"></span>
+                            </div>
+                            <div class="burger-menu__title">МЕНЮ</div>
+                            <div class="menu">
+                                <div class="menu-content">
+                                <ul class="nav">
+                                    <li class="nav__link"><a href="./service.html">Услуги</a></li>
+                                    <li class="nav__link"><a href="./special-offer.html">Акции</a></li>
+                                    <li class="nav__link">Отзывы</li>
+                                    <li class="nav__link"><a href="./franchise.html">Франшиза</a></li>
+                                    <li class="nav__link"><a href="./specialist.html">Специалисты</a></li>
+                                    <li class="nav__link"><a href="./price.html">Прайс-лист</a></li>
+                                    <li class="nav__link">Контакты</li>
+                                </ul>
+                            </div>
+                        </div>
+                            
+                    </div>
+                        
+                        
+                    </div>
+                    <div class="col-md-6 header__logo header__logo-center">
+                        <picture>
+                            <source srcset="./img/header/logo.webp" type="image/webp">
+                            <img src="./img/header/logo.png" alt="">
+                        </picture>
+                    </div>
+                    <div class="col-md-3 header__info">
+                        <a href="" class="header__tel">+7 (911) 330-01-64</a>
+                        <div class="city-dropdown">
+                            <div class="selected-city">Выберите город</div>
+                            <ul class="city-list">
+                                <li>Москва, Пл. Калинкина, 115</li>
+                                <li>Казань, Пл. Калинкина, 115</li>
+                                <li>Омск, Пл. Калинкина, 115</li>
+                                <li>Челябинск, Пл. Калинкина, 115</li>
+                                <li>Самара, Пл. Калинкина, 115</li>
+                                <li>Уфа, Пл. Калинкина, 115</li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-mobile header-mobile-primary header-mobile-inner">
+            <div class="header-mobile__wrapper ">
+                <div class="container header-mobile__container">
+                    <div class="row header-mobile__row">
+                        <div class="col-md-6 col-md-3 header__logo header-mobile__logo">
+                            <picture>
+                                <source srcset="./img/header/logo.webp" type="image/webp">
+                                <img src="./img/header/logo.png" alt="">
+                            </picture>
+                        </div>
+                        <div class="col-md-6 col-md-3 header__menu header-mobile__menu">
+                            <div class="hamburger-menu hamburger-menu-mobile">
+                                <div class="burger-menu burger-menu-mobile">
+                                    <span class="bar bar-mobile"></span>
+                                    <span class="bar bar-mobile"></span>
+                                    <span class="bar bar-mobile"></span>
+                                </div>
+                            </div>                  
+                        </div>                        
+                    </div>      
+                    <div class="row header-mobile__row header-mobile__row-bottom">  
+                        <div class="col-md-3 col-md-3 header__info-mobile">
+                            <a href="" class="header__tel-mobile">+7 (911) 330-01-64</a>
+                        </div>  
+                        <div class="col-md-6 col-md-3">
+                            <div class="city-dropdown city-dropdown-mobile">
+                                <div class="selected-city selected-city-mobile">Выберите город</div>
+                                <ul class="city-list city-list-mobile">
+                                    <li>Москва, Пл. Калинкина, 115</li>
+                                    <li>Казань, Пл. Калинкина, 115</li>
+                                    <li>Омск, Пл. Калинкина, 115</li>
+                                    <li>Челябинск, Пл. Калинкина, 115</li>
+                                    <li>Самара, Пл. Калинкина, 115</li>
+                                    <li>Уфа, Пл. Калинкина, 115</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>     
+                <div class="menu menu-mobile">
+                    <div class="menu-content menu-content-mobile">
+                        <ul class="nav nav-mobile">
+                            <li class="nav__link nav__link-mobile"><a href="./service.html">Услуги</a></li>
+                            <li class="nav__link"><a href="./special-offer.html">Акции</a></li>
+                            <li class="nav__link nav__link-mobile">Отзывы</li>
+                            <li class="nav__link nav__link-mobile"><a href="./franchise.html">Франшиза</a></li>
+                            <li class="nav__link nav__link-mobile"><a href="./specialist.html">Специалисты</a></li>
+                            <li class="nav__link nav__link-mobile"><a href="./price.html">Прайс-лист</a></li>
+                            <li class="nav__link nav__link-mobile">Контакты</li>
+                        </ul>
+                    </div>
+                </div>       
+                </div>
+                
+                
+            </div>
+        </div>
+
+    </header>
+
+    <main class="franchise__main">
+        
+        <section class="franchise-start">
+            <div class="container franchise__container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumbs">
+                      <li class="breadcrumbs__item">
+                        <a class="breadcrumbs__link breadcrumbs__prev white" href="/">Главная</a>
+                      </li>
+                      <li class="breadcrumbs__item">
+                        <span class="breadcrumbs__divider">/</span>
+                        <span class="breadcrumbs__current white">Франшиза</span>
+                      </li>
+                    </ol>
+                </nav>
+                <div class="section__title-primary white franchise-single__title">
+                    Франшиза
+                </div>
+                <div class="franchise-start__subtitle">
+                    Откройте центр подологии нового поколения с чистой прибылью от 5,6 млн рублей в год
+                </div>
+                <div class="row franchise-start__row">
+                    <div class="col-md-4 franchise-start__block">
+                        <div class="franchise-start__benefits">
+                            <div class="franchise-start__title">
+                                2 месяца
+                            </div>
+                            <div class="why__subtitle white centered">
+                                на открытие
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 franchise-start__block">
+                        <div class="franchise-start__benefits">
+                            <div class="franchise-start__title">
+                                от 8
+                            </div>
+                            <div class="why__subtitle white centered">
+                                месяцев окупаемость
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 franchise-start__block">
+                        <div class="franchise-start__benefits">
+                            <div class="franchise-start__title">
+                                от 1,1 млн
+                            </div>
+                            <div class="why__subtitle white centered">
+                                рублей в месяц средняя выручка
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="franchise-start__why">
+            <div class="container why__container">
+                <div class="franchise-why__title">Мы предоставим вам все, что необходимо для открытия:</div>
+                <div class="row why__row why__row-desktop">
+                    <div class="col-xl-3 col-md-6 col-12">
+                        <div class="why__card">
+                            <div class="why__num">01</div>
+                            <div class="why__title  white">Специалисты</div>
+                            <div class="why__subtitle  white">В центре работают высококвалифицированные дипломированные специалисты, повышающие свой уровень квалификации несколько раз в год</div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-12">
+                        <div class="why__card">
+                            <div class="why__num">02</div>
+                            <div class="why__title white">Стандарты</div>
+                            <div class="why__subtitle white">В центре применяется высокий уровень стерилизации инструментов в соответствии с требованиями СанПиН</div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-12">
+                        <div class="why__card">
+                            <div class="why__num">03</div>
+                            <div class="why__title white">Оборудование</div>
+                            <div class="why__subtitle white">Центр оснащен новейшим оборудованием от ведущих производителей медтехники Германии</div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-12">
+                        <div class="why__card">
+                            <div class="why__num">04</div>
+                            <div class="why__title white">Материалы</div>
+                            <div class="why__subtitle white">Центр является дистрибьютором линейки материалов премиум класса SUDA (Германия), SPIRULARIN (Германия), HERBITAS (Испания).</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row why__row why__row-desktop">
+                    <div class="col-xl-3 col-md-6 col-12">
+                        <div class="why__card">
+                            <div class="why__num">05</div>
+                            <div class="why__title white">Партнеры</div>
+                            <div class="why__subtitle white">Специалисты центра постоянно сотрудничают с выдающимися подологами Испании и России</div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6 col-12">
+                        <div class="why__card">
+                            <div class="why__num">06</div>
+                            <div class="why__title white">Стандарты</div>
+                            <div class="why__subtitle white">В центре применяется высокий уровень стерилизации инструментов в соответствии с требованиями СанПиН</div>
+                        </div>6
+                    </div>
+                </div>
+               
+                <div class="row why__row why__row-mobile">
+                    <div class="col-md-6 col-6 why__block">
+                        <div clas="why__card why__card-mobile">
+                            <div class="why__num why__num-mobile">01</div>
+                            <div class="why__title white">Специалисты</div>
+                            <div class="why__subtitle white">В центре работают высококвалифицированные дипломированные специалисты, повышающие свой уровень квалификации несколько раз в год</div>
+                        </div>
+                    </div>
+                    <div class=" col-md-6 col-6 why__block why__block-even">
+                        <div class="why__card why__card-mobile">
+                            <div class="why__num why__num-mobile">02</div>
+                            <div class="why__title white">Стандарты</div>
+                            <div class="why__subtitle white">В центре применяется высокий уровень стерилизации инструментов в соответствии с требованиями СанПиН</div>
+                        </div>
+                    </div>
+                    <div class=" col-md-6 col-6 why__block">
+                        <div class="why__card why__card-mobile">
+                            <div class="why__num why__num-mobile">03</div>
+                            <div class="why__title white">Оборудование</div>
+                            <div class="why__subtitle white">Центр оснащен новейшим оборудованием от ведущих производителей медтехники Германии</div>
+                        </div>
+                    </div>
+                    <div class=" col-md-6 col-6 why__block why__block-even">
+                        <div class="why__card why__card-mobile">
+                            <div class="why__num why__num-mobile">04</div>
+                            <div class="why__title white">Материалы</div>
+                            <div class="why__subtitle white">Центр является дистрибьютором линейки материалов премиум класса SUDA (Германия), SPIRULARIN (Германия), HERBITAS (Испания).</div>
+                        </div>
+                    </div>
+                    <div class=" col-md-6 col-6 why__block">
+                        <div class="why__card why__card-mobile">
+                            <div class="why__num why__num-mobile">05</div>
+                            <div class="why__title white">Партнеры</div>
+                            <div class="why__subtitle white">Специалисты центра постоянно сотрудничают с выдающимися подологами Испании и России</div>
+                        </div>
+                    </div>
+                    <div class=" col-md-6 col-6 why__block why__block-even">
+                        <div class="why__card why__card-mobile">
+                            <div class="why__num why__num-mobile">06</div>
+                            <div class="why__title white">Стандарты</div>
+                            <div class="why__subtitle white">В центре применяется высокий уровень стерилизации инструментов в соответствии с требованиями СанПиН</div>
+                        </div>
+                    </div>          
+                </div>
+
+            </div>
+        </section>
+
+        <section class="franchise-cards">
+            <div class="container franchise-cards__container">
+                <div class="franchise-cards__title">Вы можете открыть центр в одном из трёх форматов</div>
+                <div class="row franchise-cards__row">
+                    <div class="col-md-4 franchise__card">
+                        <div class="franchise__card-wrapper">
+                            <div class="franchise__card-title">MINI</div>
+                            <div class="franchise__card-info">
+                                <div class="franchise__card-subtitle">1 подологический кабинет</div>
+                                <div class="franchise__card-about">Площадь от 35 м²</div>
+                            </div>   
+                            
+                            <div class="franchise__card-footer">
+                                <div class="card__button card__button-primary">Получить финансовую модель</div>
+                            </div>
+                            
+
+                        </div>
+                    </div>
+                    <div class="col-md-4 franchise__card">
+                        <div class="franchise__card-wrapper">
+                            <div class="franchise__card-title">STANDART</div>
+                            <div class="franchise__card-info">
+                                <div class="franchise__card-subtitle">2 подологических кабинета</div>
+                                <div class="franchise__card-about">Площадь от 40 до 45 м²</div>
+                            </div>   
+                            <div class="franchise__card-footer">
+                                <div class="card__button card__button-secondary">Получить финансовую модель</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 franchise__card">
+                        <div class="franchise__card-wrapper">
+                            <div class="franchise__card-title">MAX</div>
+                            <div class="franchise__card-info">
+                                <div class="franchise__card-subtitle">3 подологический кабинета</div>
+                                <div class="franchise__card-about">Площадь от 60 до 80 м²</div>
+                            </div>   
+                            <div class="franchise__card-footer">
+                                <div class="card__button card__button-alt">Получить финансовую модель</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="income">
+            <div class="container income__container">
+                <div class="income__title">Первые посетители уже через 2 месяца!</div>
+                <div class="income__hello">Рассчитайте прибыль</div>
+                <div class="income__buttons">
+                    <button id="mini-button" class="income-button active">Mini</button>
+                    <button id="standard-button" class="income-button">Standard</button>
+                    <button id="max-button" class="income-button">Max</button>
+                  </div>
+                <div class="row income__row">
+                    <div class="col-md-4 income__block">
+                        <div class="income__subtitle">
+                            Перетащите бегунок и узнайте, какой будет прибыль в течение двух лет
+                        </div>
+                    </div>
+                     <div class="col-md-8 income__block">
+                        <input type="range" id="income__slider" min="3" max="24" step="3" value="3">
+                            <div class="income__labels">
+                                <span class="income__label">3</span>
+                                <span class="income__label">6</span>
+                                <span class="income__label">9</span>
+                                <span class="income__label">12</span>
+                                <span class="income__label">15</span>
+                                <span class="income__label">18</span>
+                                <span class="income__label">21</span>
+                                <span class="income__label">24</span>
+                            </div>
+                    
+                    
+                    
+                    </div>
+                    <p class="income__result"><span id="total-profit"></span></p>
+                </div>
+            </div>
+        </section>
+          
+        <section class="franchise-callback">
+            <div class="container franchise-callback__container">
+                <div class="franchise-callback__title">Откройте первый в городе центр здоровой стопы Светланы Соколовской</div>
+                <div class="row franchise-callback__row">
+                    <div class="col-md-6 franchise-callback__block-left franchise-callback__block">
+                        <div class="franchise-callback__title-secondary">
+                            Проверьте, свободен ли ваш регион для работы по франшизе
+                        </div>
+                        <div class="franchise-callback__form">
+                            <form id="franchise-form" class="franchise-form">
+                                <div class="franchise-form__wrapper">
+                                    <div class="form-group franchise-form__field">
+                                        <input placeholder="Ваш город" type="text" id="franchise-form__input" name="city" class="franchise-form__input" required>
+                                    </div> 
+                                    <div class="form-group franchise-form__field">
+                                        <input placeholder="Ваше имя" type="text" id="franchise-form__input" name="name" class="franchise-form__input" required>
+                                    </div>
+                                    <div class="form-group franchise-form__field">
+                                        <input placeholder="Номер телефона" type="tel" id="franchise-form__input" name="phone" class="franchise-form__input" required>
+                                    </div>
+                                </div>
+                                <button type="submit" class="franchise-callback__button">Скачать документы</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-md-6 franchise-callback__block-right franchise-callback__block">
+                        <img src="./img/franchise/trophy.png" alt="">
+                        <div class="trophy__subtitle">
+                            В апреле 2023 года франшиза центра здоровой стопы светланы соколовской стала франшизой года в области подологии
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+
+
+    </main>
+
+    <footer class="footer footer__inner">
+        <div class="container footer__container">
+            <div class="footer__wrapper">
+                <ul class="footer__nav nav nav-mobile">
+                    <li class="footer__link nav__link-mobile"><a href="./service.html">Услуги</a></li>
+                    <li class="footer__link nav__link-mobile"><a href="./special-offer.html">Акции</a></li>
+                    <li class="footer__link nav__link-mobile"><a href="">Отзывы</a></li>
+                    <li class="footer__link nav__link-mobile"><a href="./franchise.html">Франшиза</a></li>
+                    <li class="footer__link nav__link-mobile"><a href="./specialist.html">Специалисты</a></li>
+                    <li class="footer__link nav__link-mobile"><a href="">Контакты</a></li>
+                </ul>
+                <div class="footer__policy">
+                    <a href="/">Политика конфиденциальности</a>
+                </div>
+                <div class="footer__copyright">
+                    © Центр Здоровой стопы Светланы Соколовской, 2023
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+
+</body>
+
+
+
+
+
+
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+
+
+
+<script src="./js/bootstrap.bundle.min.js"></script>
+
+<script src="./js/index.js"></script>
+
+</html>

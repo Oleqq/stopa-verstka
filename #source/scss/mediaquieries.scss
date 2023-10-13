@@ -1,0 +1,30 @@
+@import "modules/variables.scss";
+
+
+
+
+
+@media screen and (max-width:991px) {
+    // .header {
+    //     opacity: 0;
+    // }
+    .header-mobile {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .city-dropdown .selected-city {
+        width: 100%;
+    }
+    .hero {
+        height: 75vh;
+    }
+}
+
+  
+  /* Скрываем десктопный заголовок на мобильных экранах */
+//   @media (max-width: 991px) {
+//     .header {
+//       display: none;
+//     }
+//   }

@@ -1,0 +1,810 @@
+@import "modules/variables.scss";
+
+a:hover {
+  color: unset;
+}
+
+ol {
+  margin-bottom: unset;
+}
+
+div.team-single__buttons > div.team-single__slider-next.swiper-button-disabled {
+  opacity: 0.4;
+}
+
+div.team-single__buttons > div.team-single__slider-prev.swiper-button-disabled {
+  opacity: 0.4;
+}
+
+.swiper-pagination-bullet {
+  background-color: $white !important;
+  opacity: 0.3 !important;
+  width: 12px !important;
+  height: 12px !important;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: $white !important;
+  opacity: 1 !important;
+  width: 12px !important;
+  height: 12px !important;
+}
+
+// breadcrumbs 
+
+.breadcrumbs {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+  
+  padding: 40px 0 100px 0;
+
+  @media (max-width:991px) {
+    padding: 30px 0 80px 0;
+  }
+  @media (max-width:767px) {
+    padding: 27.5px 0 60px 0;
+  }
+  @media (max-width:567px) {
+    padding: 25px 0 40px 0;
+  }
+  @media (max-width:425px) {
+    padding: 20px 0 20px 0;
+  }
+
+  &__item {
+    display: flex;
+    gap: 10px;
+  }
+  &__divider {
+    
+  }
+}
+
+
+
+.form-check-input {
+  border: none;
+}
+
+.form-check-input:checked[type=checkbox] {
+  background-image: url(../../img/svg/checkmark.svg);
+  background-size: auto;
+}
+
+.form-check-input:checked {
+  background-color: #fff;
+  border-color: transparent;
+}
+
+
+@media (max-width: 576px) {
+  .modal-dialog,
+  .modal-content {
+    height: 100%;
+    margin: 0 auto;
+  }
+}
+
+.form-check-input {
+  border-radius: 10px !important;
+  transform: scale(1.25);
+  position: relative;
+  bottom: 0px;
+}
+.form-check-label {
+  margin-bottom: 5px;
+}
+
+.main-modal__row {
+  row-gap: 40px;
+}
+
+// .modal {
+//   &-fullscreen {
+
+//   }
+//   &-dialog {
+
+//   }
+//   &-content {
+
+//   }
+//   &-header {
+
+//   }
+//   &-title {
+
+//   }
+//   &-body {
+
+//   }
+//   &-footer {
+
+//   }
+// }
+
+
+.modal-main {
+  max-width: 40% ;
+  @media (max-width:1440px) {
+    max-width: 80% ;
+  }
+  @media (max-width:576px) {
+    width: auto ;
+    max-width: 100%;
+  }
+}
+
+.modal-content {
+  border-radius: 40px !important;
+  @media (max-width:576px) {
+    border-radius: 0 !important;
+  }
+}
+
+.modal-body {
+  overflow: unset !important;
+}
+
+.modal-header > .btn-close {
+    background-color: #fff;
+}
+
+.modal-btn {
+    @media (max-width:767px){
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+}
+
+.modal-content {
+  background-color: $main-dark;
+}
+
+.cta__button-secondary.reverted.popup-button {
+  width: fit-content;
+}
+
+.form-control {
+  background-color: transparent;
+  color: #fff;
+    
+  padding: 0 0 .75rem 0;
+
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: unset;
+}
+
+
+.form-control:focus {
+  color: #fff;
+  background-color: transparent;
+  border-color: $white;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(30, 66, 8, 0.25);
+}
+
+.procedure-dropdown {
+  width: 400px; 
+  position: relative;
+  display: inline-block;
+  border-radius: 10px;
+    @media (max-width:767px) { 
+      width: 100%;
+    }
+  .selected-procedure {
+    padding: 20px 30px;
+    width: 450px;
+    cursor: pointer;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 1px solid $white;
+
+    width: 100%;
+
+    @media (max-width:1440px) and (min-width:991px) {
+      padding: 20px 15px;
+    }
+    @media (max-width:991px) {
+      padding: 20px 15px;
+    }
+
+    &:after {
+      content: '\25BE';
+      display: inline-block;
+      margin-left: 10px;
+      scale: 2;
+      position: absolute;
+      right: 33px;
+    }
+    &:hover {
+      content: '\25BE';
+      display: flex;
+      background-color: #fff;
+      color: $main-dark;
+    }
+  }
+
+  .procedure-list {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    overflow-y: auto;
+    background: rgb(255, 255, 255);
+    border-top: none;
+    display: none;
+    z-index: 1;
+    padding: unset;
+    border-radius: 0 0 10px 10px;
+
+    @media (max-width:1919px) {
+      width: 100%;
+    }
+
+    li {
+      padding: 20px;
+      cursor: pointer;
+      list-style: none;
+      border-bottom: 1px solid #373d3326;
+      text-align: center;
+
+      &:hover {
+        background-color: $main-green;
+        transition: 0.1s ease-in;
+        color: $white;
+      }
+    }
+  }
+
+  &.open {
+    border-radius: 10px 10px 0 0;
+    color: $main-dark;
+    border: none;
+    .procedure-list {
+      display: block;
+    }
+    .selected-procedure {
+      color: $main-dark;
+      background-color: #fff;
+      border-radius: 10px 10px 0 0;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+.favor__buttons {
+  display: flex;
+  gap: 20px;
+  row-gap: 20px;
+  justify-content: center;
+}
+
+.favor__button {
+  border-radius: 80px;
+  border: 1px solid $main-green;
+  opacity: 0.8;
+  padding: 15px 70px;
+  transition: .1 ease-in;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+
+
+    &.active {
+      background-color: $main-green;
+      transition: .1s ease-in;
+      color: $white;
+    }
+    &:hover {
+      background-color: $main-green;
+      transition: .1s ease-in;
+      color: $white;
+    }
+}
+
+// Стили для первых 3 кнопок
+.cta__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .cta__button-primary,
+  .cta__button-secondary,
+  .cta__button-alt {
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: $white;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: 'Montserrat';
+    font-size: clamp(0.875rem, 0.648rem + 1.14vw, 1.5rem);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 28.8px */
+
+    padding: 1vw 4vw; // Отступы внутри кнопок
+    text-decoration: none;
+    border-radius: 66px; // Скругление углов
+    transition: background-color 0.3s ease, color 0.3s ease; // Плавные переходы при наведении
+
+    @media (max-width:1199px) {
+      padding: 20px 92px;
+    }
+
+    @media (max-width:767px) {
+      padding: 20px 62px;
+    }
+
+    @media (max-width:425px) {
+      padding: 15px 34px;
+    }
+  }
+
+  .cta__button-primary {
+    background-color: $main-white;
+    transition: 0.1s ease-in;
+    color: $main-dark;
+  }
+
+  
+  .cta__button-secondary {
+    background-color: $main-green;
+    transition: 0.1s ease-in;
+  }
+
+  .cta__button-alt {
+    background-color: $main-gray;
+    transition: 0.1s ease-in;
+    opacity: 0.6;
+  }
+  
+  // Уникальные hover-цвета для первых 3 кнопок
+  .cta__button-primary:hover {
+    background-color: $main-green !important; // Цвет фона при наведении
+    border-color: $main-green !important; // Цвет границы при наведении
+    color: $main-white;
+  }
+  
+  .cta__button-secondary:hover {
+    background-color: rgb(55, 61, 51); // Цвет фона при наведении
+    border-color: rgb(55, 61, 51); // Цвет границы при наведении
+  }
+  
+  .cta__button-alt:hover {
+    background-color: rgb(55, 61, 51); // Цвет фона при наведении
+    border-color: rgb(55, 61, 51); // Цвет границы при наведении
+  }
+  
+  .cta__button-primary.reverted {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    background-color: $main-dark; // Цвет фона при наведении
+    border-color: $main-dark; // Цвет границы при наведении
+  }
+
+  .cta__button-secondary.reverted {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    background-color: rgb(55, 61, 51); // Цвет фона при наведении
+    border-color: rgb(55, 61, 51); // Цвет границы при наведении
+  }
+
+  .cta__button-alt.reverted {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    background-color: rgb(55, 61, 51); // Цвет фона при наведении
+    border-color: rgb(55, 61, 51); // Цвет границы при наведении
+  }
+  
+
+  
+  // Стили при наведении для "reverted" кнопок (противоположное при наведении)
+  .cta__button-primary.reverted:hover {
+    background-color: $main-white;
+    transition: 0.1s ease-in;
+  }
+
+  .cta__button-secondary.reverted:hover {
+    background-color: $main-green;
+    transition: 0.1s ease-in;
+  }
+
+  .cta__button-alt.reverted:hover {
+    background-color: $main-gray;
+    transition: 0.1s ease-in;
+    opacity: 0.6;
+  }
+  
+
+
+// card buttons ~~~~~
+
+.card__button-primary,
+.card__button-secondary,
+.card__button-alt {
+  padding: 30px 10px;
+
+  color: $main-dark;
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: 'Montserrat';
+  font-size: clamp(0.875rem, 0.767rem + 0.46vw, 1.5rem);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 28.8px */
+
+  transition: background-color 0.3s ease, color 0.3s ease; // Плавные переходы при наведении
+
+  cursor: pointer;
+
+  max-width:440px;
+  
+
+  margin: 0 auto;
+
+  // @media (max-width:1199px) {
+  //   max-width: 300px;
+  // }
+
+}
+
+.card__button {
+  white-space: nowrap;
+  @media (max-width:350px) {
+    white-space: unset;
+  }
+  &-primary {
+    border: 1px solid $main-dark;
+    border-radius: 80px;
+    background-color: transparent;
+    
+  }
+  &-primary:hover {
+    color: $white;
+    background-color: $main-dark;
+    transition: 0.1s ease-in;
+  }
+
+  &-secondary {
+    border-radius: 80px;
+    background: rgba(55, 61, 51, 0.20);
+  }
+  &-secondary:hover {
+    color: $white;
+    background-color: $main-green;
+    transition: 0.1s ease-in;
+  }
+
+  &-alt {
+    border-radius: 80px;
+    background: $main-dark;
+    color: $white;
+  }
+  &-alt:hover {
+    color: $white;
+    background-color: $main-green;
+    transition: 0.1s ease-in;
+  }
+}
+
+// favor кнопки бегунка ~~~~~~~~~~~~~~~~
+
+.income__buttons {
+  display: flex;
+  gap: 2vw;
+}
+
+.income-button {
+  max-width: 300px;
+  width: 300px;
+  padding: 30px 0;
+  border-radius: 80px;
+  transition: .2s ease-in;
+  background: rgba(108, 116, 103, 0.30);
+  border: none;
+
+  font-size: clamp(0.875rem, 0.682rem + 0.82vw, 2rem);
+  color: var(--eee-8-dd, #FFF7EA);
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-family:'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 16.8px */
+  text-transform: uppercase;
+
+  @media (max-width:1920px) {
+        
+  }
+  @media (max-width:1600px) {
+      
+  }
+  @media (max-width:1440px) {
+      
+  }
+  @media (max-width:1280px) {
+      
+  }
+  @media (max-width:991px) {
+    padding: 25px 0;
+  }
+  @media (max-width:767px) {
+      
+  }
+  @media (max-width:567px) {
+      padding: 17px 0;
+  }
+  @media (max-width:425px) {
+      
+  }
+
+  &.active {
+
+    background: $main-green;
+    transition: .2s ease-in;
+  }
+  &:hover {
+    background: $main-green;
+    transition: .2s ease-in;
+  }
+}
+
+
+#income__slider {
+  width: 100%;
+  height: 4px;
+  background: #CBCFC9;
+  border-radius: 20px;
+  opacity: 0.8;
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--main-dark, #373D33);
+    transform: scale(1.5);
+    cursor: pointer;
+    border: 2px solid #CBCFC9;
+  }
+
+  &::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    
+    background: var(--main-dark, #373D33);
+    cursor: pointer;
+    border: 2px solid #CBCFC9;
+  }
+}
+
+.income__labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+
+  .income__label {
+    font-size: clamp(0.75rem, 0.621rem + 0.55vw, 1.5rem);
+    color: $white;
+    margin-left: 10%;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+
+
+
+
+// каллбак форма в franchise.html
+
+.franchise-callback {
+  
+  &__form {
+    display: flex;
+    justify-content: flex-start;
+    @media(max-width:991px) {
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 100px;
+    } 
+  }
+  
+}
+
+.franchise-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 550px;
+    @media(max-width:1919px) {
+      width: 75%;
+    }
+    @media (max-width:991px) {
+      width: 75%;
+      gap: 50px;
+    }
+    @media (max-width:767px) {
+
+    }
+    @media (max-width:567px) {
+      width: 100%;
+    }
+  
+
+  &__field {
+    margin-bottom: 20px;
+    position: relative;
+
+  }
+  &__input {
+    padding: 15px 40px !important;
+    background-color: $white; // Паддинг для инпута
+    border-radius: 100px; // Радиус для инпута
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+  }
+}
+
+
+.franchise-callback__button {
+  max-width: 440px;
+  padding: 20px 30px;
+  border-radius: 80px;
+  transition: .2s ease-in;
+  background-color: transparent;
+  border: 1px solid #CBCFC9;
+
+  margin-top: 30px;
+  font-size: clamp(0.875rem, 0.768rem + 0.46vw, 1.5rem);
+  color: var(--eee-8-dd, #FFF7EA);
+  text-align: center;
+  leading-trim: both;
+  text-edge: cap;
+  font-family:'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%; /* 16.8px */
+  &:hover {
+    background-color: $main-green;
+    border: 1px solid $main-green;
+  }
+  @media (max-width:991px) {
+    margin: 0 auto;
+  }
+}
+
+
+
+
+
+
+
+
+// star rating ~~~~~~~~~~~
+
+
+.rating {
+  &-desktop {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    @media (max-width:767px) {
+      display: none;
+    }
+  }
+  &-mobile {
+    display: none;
+    @media (max-width:767px) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+.star__wrapper {
+  display: inline-block;
+}
+
+
+.star {
+  display: inline-block;
+  width: 28px;
+  height: 26px;
+  margin-right: 4px;
+  cursor: pointer;
+
+  @media (max-width:767px) {
+    width: 26px;
+    height: 26px;
+  }
+  
+  @media (max-width:425px) {
+    width: 24px;
+    height: 24px;
+  }
+  @media (max-width:374px) {
+    width: 15px;
+    height: 15px;
+  }
+  @media (max-width:330px) {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+.star svg {
+  width: 100%;
+  height: 100%;
+  transition: fill 0.3s; /* Добавляем плавное изменение цвета */
+}
+
+.filled path {
+  fill: #F39C62;
+}
+
+.empty path {
+  stroke: #F39C62;
+  stroke-width: 2;
+  
+}
+
+/* Логика наведения */
+.star .filled:hover path {
+  fill: #F39C62 !important;
+}
+
+.star.empty:hover path {
+  stroke: #F39C62 !important;
+}
+

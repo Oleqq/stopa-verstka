@@ -1,0 +1,66 @@
+// footer ~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.footer {
+    background: $main-dark;
+    padding: 40px 0;
+    &__container {
+
+    }
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        text-align: center;
+        
+    }
+    &__inner {
+        border-top: 1px solid rgba(255, 247, 234, 0.30);
+    }
+}
+
+.footer {
+    
+    &__nav {
+        padding: unset;
+        display: flex;
+        gap: 20px;
+        flex-direction: row;
+    }
+    &__nav > span {
+        width: 2px;
+        height: 24px;
+        opacity: 0.4;
+        background: $white;    
+    }
+    &__link {
+        list-style: none;
+        transition: .15s ease-in;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+    &__link:hover {
+        color: #ffffffa0;
+        transition: .15s ease-in;
+    }
+    &__link::after {
+        content: '';
+        height: 22px;
+        width: 1px;
+        background-color: $white;
+        opacity: .8;
+        display: inline-block;
+
+        @media (max-width:767px) {
+            display: none;
+        }
+
+    }
+    &__link:last-child::after {
+        display: none;
+    }
+
+}   

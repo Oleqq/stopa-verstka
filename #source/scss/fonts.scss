@@ -1,0 +1,1194 @@
+
+
+@import "modules/variables.scss";
+
+@font-face {
+    font-family: 'Alethia Pro';
+    src: local('Alethia Pro'), local('AlethiaPro-Regular');
+    src: url('../fonts/alethiapro-regular-webfont') format('opentype'), 
+         url('../fonts/alethiapro-regular-webfont.ttf') format('truetype');
+
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Regular.eot');
+    src: local('Montserrat Regular'), local('Montserrat-Regular'),
+        url('../fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Montserrat-Regular.woff2') format('woff2'),
+        url('../fonts/Montserrat-Regular.woff') format('woff'),
+        url('../fonts/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-Medium.eot');
+    src: local('Montserrat Medium'), local('Montserrat-Medium'),
+        url('../fonts/Montserrat-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Montserrat-Medium.woff2') format('woff2'),
+        url('../fonts/Montserrat-Medium.woff') format('woff'),
+        url('../fonts/Montserrat-Medium.ttf') format('truetype');
+    font-weight: 500;
+
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/Montserrat-SemiBold.eot');
+    src: local('Montserrat SemiBold'), local('Montserrat-SemiBold'),
+        url('../fonts/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Montserrat-SemiBold.woff2') format('woff2'),
+        url('../fonts/Montserrat-SemiBold.woff') format('woff'),
+        url('../fonts/Montserrat-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/EncodeSans-Bold.eot');
+    src: local('Montserrat Bold'), local('Montserrat-Bold'),
+        url('../fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Montserrat-Bold.woff2') format('woff2'),
+        url('../fonts/Montserrat-Bold.woff') format('woff'),
+        url('../fonts/Montserrat-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+
+
+// Стили шрифтов ----------------------------------
+
+.form-check-label {
+    font-size: clamp(0.75rem, 0.707rem + 0.18vw, 1rem);
+    line-height: 25px;
+    @media (max-width:567px) {
+        line-height: 20px;
+    }
+}
+
+
+.breadcrumbs {
+    leading-trim: both;
+    text-edge: cap;
+    font-family: 'Montserrat';
+    font-size: clamp(0.625rem, 0.518rem + 0.46vw, 1.25rem);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 24px */
+    &__divider {
+        color: $main-green;
+    }
+    &__current {
+        color: $main-dark;
+    }
+    &__current.white {
+        color: $white;
+    }
+    &__prev {
+        color: $main-green;
+        transition: .2s ease-in;
+    }
+    &__prev:hover {
+        color: $main-dark;
+        opacity: 0.8;
+        transition: .2s ease-in;
+    }
+    &__prev.white:hover {
+        color: $white;
+        opacity: 0.8;
+        transition: .2s ease-in;
+    }
+}
+
+.section__title-alt {
+    color: $main-dark;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: 'Montserrat';
+    font-size: clamp(1.5rem, 1.243rem + 1.1vw, 3rem);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 57.6px */
+    padding: 0 0 40px 0;
+    @media (max-width:991px) {
+        padding-bottom: 60px;
+    }
+    @media (max-width:767px) {
+        padding-bottom: 30px;
+    }
+    @media (max-width:567px) {
+        padding-bottom: 30px;
+    }
+    @media (max-width:425px) {
+        padding-bottom: 30px;
+    }
+}
+
+.section__title-alt.centered {
+    @media (max-width:991px) {
+        text-align: center;
+    }
+}
+
+.section__title-alt.lefted {
+    text-align: center;;
+    @media (max-width:991px) {
+        text-align: left !important;
+    }
+}
+
+.section__title-alt.centered-mobile {
+    @media (max-width:567px) {
+        text-align: center;
+    }
+}
+
+.section__title-alt.center {
+    text-align: center;
+}
+
+.section__title-primary {
+    color: $main-dark;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: 'Alethia Pro';
+    font-size: clamp(2.625rem, 2.046rem + 2.471vw, 6rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    align-items: center;
+    
+  }
+
+.section__title-primary-small {
+    font-size: clamp(1.5rem, 1.243rem + 1.1vw, 3rem);
+    color: $main-dark;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: 'Alethia Pro';
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    align-items: center;
+}
+
+.section__title-primary.white {
+    color: $white;
+}
+
+.section__title-primary.center {
+    text-align: center;
+}
+
+.section__title-primary.centered {
+    padding-bottom: 80px;
+    @media (max-width:991px) {
+        text-align: center;
+        padding-bottom: 70px;
+    }
+    @media (max-width:767px) {
+        padding-bottom: 65px;
+    }
+    @media (max-width:567px) {
+        padding-bottom: 55px;
+    }
+    @media (max-width:425px) {
+        padding-bottom: 30px;
+    }
+}
+
+
+.section__title-secondary {
+    color: $white;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: 'Alethia Pro';
+    font-size: clamp(2.625rem, 2.046rem + 2.471vw, 6rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    align-items: center;
+    text-align: center;
+    @media (max-width:425px) {
+        line-height: 40px;
+    }
+    @media (max-width:425px) {
+        line-height: 40px;
+    }
+    @media (max-width:368px) {
+        font-size: 32px;
+    }
+}
+
+
+body > section.franchise > div > div.section__title-secondary {
+    @media (max-width:767px) {
+        text-align: center !important;
+    }
+}
+
+
+// header 
+
+.header {
+    &__tel {
+        color: $white;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-size: clamp(0.875rem, 0.725rem + 0.64vw, 1.75rem);
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+}
+
+// firstscreen
+
+.nav {
+
+    &__link {
+        color: $white;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-size: clamp(0.875rem, 0.682rem + 0.824vw, 2rem);
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        transition: 0.2s ease-in;
+        cursor: pointer;
+    }
+    &__link:hover {
+        scale: 1.125;
+        transition: 0.1s ease-in;
+    }
+}
+
+
+
+.hero__title {
+    color: var(--white, #FFFAF1);
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: 'Alethia Pro';
+    font-size: clamp(3.5rem, 2.728rem + 3.3vw, 8rem);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    @media (max-width:368px) {
+        font-size: 32px;
+    }
+}
+
+.hero__subtitle {
+    text-align: center;
+    color: $white;
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: 'Montserrat';
+    font-size: clamp(0.875rem, 0.725rem + 0.64vw, 1.75rem);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 21.6px */
+
+    width: 85%;
+}
+
+.selected-city {
+    color: $white;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: 'Montserrat';
+    font-size: clamp(0.875rem, 0.832rem + 0.18vw, 1.125rem);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.city-list 
+li {
+    color: $main-dark;
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: 'Montserrat';
+    font-size: clamp(0.875rem, 0.832rem + 0.18vw, 1.125rem);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+
+// services ~~~~~~~~~~~~~~~
+
+.services {
+    &__badge {
+        color: $main-dark;
+        text-align: center;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%; /* 38.4px */
+    }
+    &__title {
+        color: $main-dark;
+        text-align: center;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-size: clamp(1.25rem, 1.207rem + 0.18vw, 1.5rem);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%; /* 38.4px */  
+            
+    }
+    &__overlay-paragraph {
+        color: $white;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-size: clamp(0.875rem, 0.811rem + 0.27vw, 1.25rem);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%; /* 24px */
+        text-align: left;
+    }
+    &__overlay-title {
+        color: $white;
+        text-align: left;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-size: clamp(1.25rem, 1.207rem + 0.18vw, 1.5rem);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%; /* 38.4px */   
+        
+    }
+}
+
+
+.service-single {
+    &__subtitle {
+        font-size: clamp(0.875rem, 0.768rem + 0.46vw, 1.5rem);
+        color: $main-dark;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%; /* 28.8px */
+
+        overflow-wrap: break-word;
+    }
+}
+
+.service-single__title-desktop {
+    margin-bottom: 50px;
+    @media (max-width:1499px) {
+        display: none;
+    }
+}
+
+.service-single__title-mobile {
+    display: none;
+    text-align: center;
+    padding: 40px 0;
+    @media (max-width:1499px) {
+        display: block;
+    }
+}
+
+// team ~~~~~~~~~~~~~~~~~~~~~
+
+.member {
+    &__rate-secondary > span {
+        font-size: clamp(0.75rem, 0.578rem + 0.73vw, 1.75rem);
+        color: #F39C62;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%; /* 14.4px */
+    }
+    &__rate-secondary > svg {
+        @media (max-width:1199px) {
+            max-width: 22.5px;
+        }
+        @media (max-width:991px) {
+            width: 20px;
+        }
+        @media (max-width:767px) {
+            width: 17.5px;
+        }
+        @media (max-width:545px) {
+            width: 15px;
+        }
+        @media (max-width:425px) {
+            width: 15px;
+        }
+        @media (max-width:375px) {
+            width: 12.5px;
+        }
+        @media (max-width:350px) {
+            width: 10px;
+        }
+    }
+    &__reviews-secondary {
+        color: $main-dark;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-size: clamp(0.8rem, 0.628rem + 0.458vw, 1.8rem);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%; /* 21.6px */
+        @media (max-width:1199px) {
+            font-size: clamp(0.5rem, 0.196rem + 1.3vw, 1rem);
+            
+        }
+    }
+    &__reviews-secondary.alt {
+        font-size: clamp(0.875rem, 0.725rem + 0.64vw, 1.75rem);
+    }
+    &__name-primary {
+        color: $main-dark;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-size: clamp(1rem, 0.914rem + 0.37vw, 1.5rem);
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%; /* 28.8px */
+        
+        transition: .1s ease-in;
+        cursor: pointer;
+
+        max-width: fit-content;
+
+        @media (max-width:1199px) {
+            font-size: clamp(0.875rem, 0.571rem + 1.3vw, 1.375rem);
+        }
+    }
+    &__name-primary:hover {
+        transition: .1s ease-in;
+        color: $main-green;
+    }
+    &__name-secondary:hover {
+        transition: .1s ease-in;
+        color: #fffaf17d;
+    }
+    &__name-secondary {
+        color: $white;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-size: clamp(1rem, 0.914rem + 0.37vw, 1.5rem);
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%; /* 28.8px */
+
+        transition: .1s ease-in;
+        cursor: pointer;
+
+        max-width: fit-content;
+
+        @media (max-width:1199px) {
+            font-size: clamp(0.875rem, 0.571rem + 1.3vw, 1.375rem);
+        }
+    }
+    &__spec-primary {
+        color: $main-dark;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-size: clamp(0.75rem, 0.621rem + 0.55vw, 1.5rem);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%; /* 28.8px */
+        @media (max-width:1199px) {
+            font-size: clamp(0.75rem, 0.37rem + 1.62vw, 1.375rem);
+        }
+    }
+    &__spec-secondary {
+        color: $white;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-size: clamp(0.75rem, 0.621rem + 0.55vw, 1.5rem);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%; /* 28.8px */
+        @media (max-width:1199px) {
+            font-size: clamp(0.75rem, 0.37rem + 1.62vw, 1.375rem);
+        }
+    }
+    &__about-primary {
+        color: $main-dark;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-size: clamp(0.625rem, 0.518rem + 0.46vw, 1.25rem);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%; /* 24px */
+        @media (max-width:1199px) {
+            font-size: clamp(0.625rem, 0.321rem + 1.3vw, 1.125rem);
+        }
+    }
+    &__about-secondary {
+        color: $white;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-size: clamp(0.625rem, 0.518rem + 0.46vw, 1.25rem);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%; /* 24px */
+        @media (max-width:1199px) {
+            font-size: clamp(0.625rem, 0.321rem + 1.3vw, 1.125rem);
+        }
+        
+    }
+    
+
+}
+
+.team__link-single {
+    color: $white;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: 'Montserrat';
+    font-size: clamp(1.273rem, 1.117rem + 0.458vw, 2.182rem);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 43.2px */
+    z-index: 100;
+}
+
+// franchise ~ benefits ~~~~~~~~~~~~~~~
+
+.franchise-start {
+    &__subtitle {
+        font-size: clamp(1.5rem, 1.243rem + 1.1vw, 3rem);
+        color: $white;
+        text-align: center;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Alethia Pro';
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    &__title {  
+        font-size: clamp(2.25rem, 1.606rem + 2.75vw, 6rem);
+        white-space: nowrap;
+    }
+    &__benefits {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+    }
+    &__row {
+        align-items: baseline;
+    }
+
+}
+
+
+.franchise-cards__title {
+    font-size: clamp(1.75rem, 1.364rem + 1.65vw, 4rem);
+    color: var(--white, #FFFAF1);    
+    leading-trim: both;
+    text-edge: cap;
+    font-family: 'Alethia Pro';
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    @media (max-width:767px) {
+        text-align: center;
+    }
+}
+
+.franchise__card {
+    &-title {
+        font-size: clamp(2.5rem, 2.07rem + 1.83vw, 5rem);
+        color: $main-dark;
+        text-align: center;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+
+        
+    }
+    &-subtitle {
+        font-size: clamp(1.25rem, 1.078rem + 0.73vw, 2.25rem);
+        color: $main-dark;
+        text-align: center;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    &-info {
+        color: $main-dark;
+        text-align: center;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-size: clamp(1.375rem, 1.181rem + 0.82vw, 2.5rem);
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+}
+
+.franchise-single__title {
+    @media (max-width:991px) {
+        text-align: center;
+    }
+}
+
+.franchise-why__title {
+    font-size: clamp(1.5rem, 1.243rem + 1.1vw, 3rem);
+    color: var(--white, #FFFAF1);
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "Alethia Pro";
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+    @media (max-width:991px) {
+        text-align: left;
+    }
+}
+
+.benefits {
+    &__title {
+    color: $white;
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: 'Montserrat';
+    font-size: clamp(0.875rem, 0.768rem + 0.46vw, 1.5rem);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    }
+}
+
+// contacts ~~~~~~~~~~~~~~~
+
+.contacts {
+    &__card {
+
+    }
+    &__paragraph {
+
+    }
+    &__title {
+        color: $main-dark;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-size: clamp(1.25rem, 1.121rem + 0.55vw, 2rem);
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        opacity: 0.8;
+    }
+    &__subtitle {
+        color: $main-dark;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-size: clamp(1rem, 0.914rem + 0.37vw, 1.5rem);
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    &__tip {
+        color: $main-dark;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-size: clamp(0.75rem, 0.621rem + 0.549vw, 1.5rem);
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        opacity: 0.7;
+    }
+    &__socials > a {
+        text-decoration: none;
+    }
+}
+
+// why ~~~~~~~~~~~~~~~
+
+.why {
+    &__num {
+        color: $main-green;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Alethia Pro';
+        font-size: 128px;
+        font-size: clamp(3.75rem, 3.021rem + 3.112vw, 8rem);
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        opacity: 0.3;
+    }
+    &__title {
+        color: $main-dark;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-size: clamp(1.125rem, 0.975rem + 0.64vw, 2rem);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%; /* 38.4px */
+
+    }
+    &__subtitle {
+        color: $main-dark;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-size: clamp(0.75rem, 0.621rem + 0.55vw, 1.5rem);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%; /* 28.8px */
+
+        overflow-wrap: break-word;
+    }
+    &__subtitle.white.centered {
+        color: $white;
+        text-align: center;
+    }
+}
+
+// footer ~~~~~~~~~~~~~~~~~~~~~~ 
+
+.footer {
+    &__link {
+        color: $white;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    &__policy {
+        color: $white;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+
+        opacity: 0.8;
+    }
+    &__copyright {
+        color: $white;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+
+        opacity: 0.8;
+    }
+    &__nav > li {
+        font-size: clamp(0.75rem, 0.621rem + 0.55vw, 1.5rem);
+    }
+}
+
+
+
+// faq ~~~~~~~~~~~~~~~~
+
+.accordion-header {
+    color: $white;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 21.6px */
+    font-size: clamp(1.125rem, 0.975rem + 0.64vw, 2rem);
+}
+
+
+.accordion {
+    &__stroke-title {
+        font-size: clamp(0.75rem, 0.621rem + 0.55vw, 1.5rem);
+        color: $white;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+    }
+    &__stroke-price {
+        color: $white;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%; /* 21.6px */
+        font-size: clamp(1.125rem, 0.975rem + 0.64vw, 2rem);
+    }
+}
+    
+// price ~~~~~~~~~~~~~~
+
+.price {
+    &__stroke-title {
+        font-size: clamp(0.75rem, 0.621rem + 0.55vw, 1.5rem);
+        color: $main-dark;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%;
+    }
+    &__stroke-price {
+        color: $main-dark;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%; /* 21.6px */
+        font-size: clamp(1.125rem, 0.975rem + 0.64vw, 2rem);
+
+    }
+    &__title {
+        font-family: "Montserrat";
+        font-weight: 500;
+        @media (min-width:2560px) {
+            padding-bottom: 30px;
+        }
+        @media (max-width:1920px) {
+            padding-bottom: 20px;
+        }
+        @media (max-width:991px) {
+            padding-bottom: 20px;
+        }
+        @media (max-width:767px) {
+            padding-bottom: 20px;
+        }
+        @media (max-width:545px) {
+            padding-bottom: 30px;
+        }
+        @media (max-width:425px) {
+            padding-bottom: 15px;
+        }
+    }
+}
+
+
+// special-offer ~~~~~~~~~~~~~~~~~ 
+
+.special-offer {
+    &__title {
+        color: $main-dark;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-size: clamp(1.125rem, 1.018rem + 0.46vw, 1.75rem);
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        cursor: pointer;
+    }
+    &__title:hover {
+        color: $main-green;
+        transition: .1s ease-in;
+    }
+    &__counter {
+        font-size: clamp(0.875rem, 0.739rem + 0.68vw, 1.25rem);
+        color: var(--main-dark, #373D33);
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+}
+
+// specialist-single ~~~~~~~~~~~~~~~ 
+
+section.specialist-work > .specialist-work__container > div.section__title-primary {
+    text-align: center;
+    margin-bottom: 2vw;
+}
+
+.specialist-single {
+    &__badge {
+        font-size: clamp(0.875rem, 0.768rem + 0.46vw, 1.5rem);
+        font-weight: 500;
+        @media (max-width:767px) {
+            display: none;
+        }
+    }
+    &__name {
+        font-size: clamp(1.375rem, 1.096rem + 1.19vw, 3rem);
+        color: $main-dark;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%; /* 26.4px */
+    }
+    &__spec {
+        color: $main-dark;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-size: clamp(1.125rem, 0.932rem + 0.82vw, 2.25rem);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%; /* 43.2px */
+    }
+    &__exp-title {
+        color: $main-dark;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-size: clamp(1.125rem, 0.932rem + 0.82vw, 2.25rem);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%; /* 43.2px */
+    }
+    &__exp {
+        color: $main-dark;
+        leading-trim: both;
+        text-edge: cap;
+        font-size: clamp(0.875rem, 0.725rem + 0.64vw, 1.75rem);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%; /* 16.8px */
+    }
+    &__work {
+
+    }
+    &__badge {
+
+    }
+
+}
+
+// popup ~~~~~~~~~~~~~~~~~~~~~~~
+
+.modal {
+  &-fullscreen {
+
+  }
+  &-dialog {
+
+  }
+  &-content {
+
+  }
+  &-header {
+    border: none;
+  }
+  &-title {
+    font-size: clamp(2.5rem, 2.243rem + 1.1vw, 4rem);
+    color: $white;
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: 'Alethia Pro';
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  &-body {
+
+  }
+  &-footer {
+
+  }
+}
+
+
+// work ~~~~~~~~~~ 
+
+.work__title {
+    font-size: clamp(0.875rem, 0.725rem + 0.64vw, 1.75rem);
+
+    color: $main-dark;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 16.8px */
+}
+
+
+// income ~~~~~~~~~~~~~~~~~~~~~
+
+.income {
+    &__title {
+        color: $white;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Alethia Pro';
+        font-size: clamp(1.75rem, 1.364rem + 1.65vw, 4rem);
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    &__hello {
+        font-size: clamp(1.5rem, 1.328rem + 0.73vw, 2.5rem);
+        color: $white;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        @media (max-width:991px) {
+            text-align: center;
+        }
+    }
+    &__subtitle {
+        color: $white;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-size: clamp(0.875rem, 0.768rem + 0.46vw, 1.5rem);
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        @media (max-width:991px) {
+            text-align: center;
+            margin-bottom: 7vw;
+        }
+    }
+    &__result {
+        font-size: clamp(2.25rem, 1.95rem + 1.28vw, 4rem);
+        color: $white;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        @media (max-width:991px) {
+            text-align: center;
+            padding-top: 100px;
+        }
+    }
+}
+#total-profit {
+    font-size: clamp(2.25rem, 1.95rem + 1.28vw, 4rem);
+    color: $white;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    @media (max-width:991px) {
+        text-align: center;
+        padding-top: 5vw;
+    }
+}
+
+
+// franchise callback form ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+.form-check > label > a {
+    padding-bottom: 2px;
+    border-bottom: 1px solid $white;
+}
+
+.form-check > label > a:hover {
+    padding-bottom: 2px;
+    color: $main-gray;
+    transition: 0.2s ease-in;
+    border-bottom: 1px solid $main-gray;
+}
+
+.franchise-callback {
+    &__title {
+        color: #FFFAF1;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: "Alethia Pro";
+        font-size: clamp(1.75rem, 1.364rem + 1.65vw, 4rem);
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        @media (max-width:991px) {
+            margin-bottom: 30px;
+        }
+    }
+    &__title-secondary {
+        font-size: clamp(1.125rem, 0.975rem + 0.64vw, 2rem);
+        color: $white;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        max-width: 630px;
+    }
+}
+
+.trophy__subtitle {
+    font-size: clamp(0.875rem, 0.768rem + 0.46vw, 1.5rem);
+    color: $white;
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    max-width: 630px;
+}
